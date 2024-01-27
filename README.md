@@ -1,2 +1,3 @@
 # Desktop-icon-tools
-A cross platform desktop icon organizing tool
+
+一款跨平台桌面图标整理工具
