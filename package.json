@@ -1,0 +1,34 @@
+{
+    "name": "desktop-icon-tools",
+    "productName": "desktop-icon-tools",
+    "version": "1.0.0",
+    "description": "一款跨平台桌面图标整理工具",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "publish": "electron-forge publish"
+    },
+    "keywords": [
+        "Desktop",
+        "Manage",
+        "Icons"
+    ],
+    "author": "782 & NB-Group",
+    "license": "MIT",
+    "dependencies": {
+        "electron-squirrel-startup": "^1.0.0",
+        "prettier": "^3.2.4"
+    },
+    "devDependencies": {
+        "@electron-forge/cli": "^7.2.0",
+        "@electron-forge/maker-deb": "^7.2.0",
+        "@electron-forge/maker-rpm": "^7.2.0",
+        "@electron-forge/maker-squirrel": "^7.2.0",
+        "@electron-forge/maker-zip": "^7.2.0",
+        "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+        "electron": "28.2.0",
+        "eslint": "^8.56.0"
+    }
+}
