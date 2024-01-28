@@ -32,15 +32,12 @@ jobs:
     - run: sudo npm i electron-builder -g
     - run: npm install
     - run: sudo npm run build-linux
-
-    - name: Github Release
+    - name: GitHub Releases
   # You may pin to the exact commit or the version.
-  # uses: elgohr/Github-Release-Action@3fed620eb5e049c09eade024832d074a6ad15457
-      uses: elgohr/Github-Release-Action@v5
-      with:
-    # The name of the release to publish
-        title: test_release
-    # Directory of the repository that the should create the release
-        workdir: ./dist
+  # uses: fnkr/github-action-ghr@96b1448dc6162f370067e1de51e856e733a76b4f
+      uses: fnkr/github-action-ghr@v1.3
+      env:
+        GHR_PATH: dist/desktop-icon-tools-1.0.0.AppImage
+        GITHUB_TOKEN: ${{ secrets.token }}
           
     
