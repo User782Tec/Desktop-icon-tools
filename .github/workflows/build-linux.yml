@@ -43,7 +43,7 @@ jobs:
     # Gives the release a custom name. Defaults to tag name
         name: test-release
     # Gives a tag name. Defaults to github.GITHUB_REF
-        tag_name: v1.0.1
+        tag_name: v1.0.2
     # A file, directory or wildcard pattern that describes what to upload
         path: ./dist/*.AppImage
     # Authorized secret GitHub Personal Access Token. Defaults to github.token
@@ -59,7 +59,7 @@ jobs:
     # Gives the release a custom name. Defaults to tag name
         name: test-release
     # Gives a tag name. Defaults to github.GITHUB_REF
-        tag_name: v1.0.1
+        tag_name: v1.0.2
     # A file, directory or wildcard pattern that describes what to upload
         path: ./dist/*.deb
     # Authorized secret GitHub Personal Access Token. Defaults to github.token
@@ -75,7 +75,7 @@ jobs:
     # Gives the release a custom name. Defaults to tag name
         name: test-release
     # Gives a tag name. Defaults to github.GITHUB_REF
-        tag_name: v1.0.1
+        tag_name: v1.0.2
     # A file, directory or wildcard pattern that describes what to upload
         path: ./dist/*.rpm
     # Authorized secret GitHub Personal Access Token. Defaults to github.token
