@@ -9,9 +9,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env: 
-  GH_TOKEN: ${{ secrets.token }}
-
 jobs:
   build:
 
@@ -43,8 +40,6 @@ jobs:
         name: test-release
     # Gives a tag name. Defaults to github.GITHUB_REF
         tag_name: v1.0.0
-    # Artifact name
-        filename: Linux.AppImage
     # A file, directory or wildcard pattern that describes what to upload
         path: ./dist/*.AppImage
     # Authorized secret GitHub Personal Access Token. Defaults to github.token
