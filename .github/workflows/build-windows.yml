@@ -26,10 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: sudo npm i electron-builder -g
+    - run: npm i electron-builder -g
     - run: npm install
-    - run: sudo npm run build-win64
-    - run: sudo npm run build-win
+    - run: npm run build-win64
+    - run: npm run build-win
     - name: Release build
   # You may pin to the exact commit or the version.
   # uses: HEPTAhu/upload_github_release_assets_action@93feb159382a1b8a44c93b5afc48f046effd3960
