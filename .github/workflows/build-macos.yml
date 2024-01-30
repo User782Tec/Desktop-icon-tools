@@ -6,8 +6,8 @@ name: Build for MacOS
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    tags:
+      - "v*.*.*"
 
 env:
   GH_TOKEN:
@@ -34,20 +34,10 @@ jobs:
     - run: npm install
     - run: npm run build-mac
     - name: Release build
-  # You may pin to the exact commit or the version.
-  # uses: HEPTAhu/upload_github_release_assets_action@93feb159382a1b8a44c93b5afc48f046effd3960
       uses: HEPTAhu/upload_github_release_assets_action@v0.0.5
       with:
-    # Note-worthy description of changes in release
-        body: Test!
-    # Gives the release a custom name. Defaults to tag name
-        name: test-release
-    # Gives a tag name. Defaults to github.GITHUB_REF
-        tag_name: v1.0.2
-    # A file, directory or wildcard pattern that describes what to upload
+        body: "Full changelog: <https://github.com/User782Tec/Desktop-icon-tools/commits/${{ github.ref_name }}>"
+        name: ${{ github.ref_name }}
+        tag_name: ${{ github.ref_name }}
         path: ./dist/*.dmg
-    # Authorized secret GitHub Personal Access Token. Defaults to github.token
         token: ${{ secrets.token }}
-          
-          
-    
